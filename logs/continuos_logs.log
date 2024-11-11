@@ -22,3 +22,384 @@ FileNotFoundError: [Errno 2] No such file or directory: 'params.yaml'
 [2024-11-10 22:41:43,578: INFO: common: created directory at: artifacts/data_ingestion]
 [2024-11-10 22:41:46,860: INFO: data_ingestion: File is downloaded]
 [2024-11-10 22:41:46,983: INFO: main: Stage Data Ingestion Name completed]
+[2024-11-11 14:23:15,316: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 14:23:15,326: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 14:23:15,327: ERROR: main: [Errno 2] No such file or directory: 'params.yaml']
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 10, in <module>
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_1_data_ingestion.py", line 11, in initiate_data_ingestion
+    config=ConfigurationManager()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 11, in __init__
+    self.paramss=read_yaml(params_filepath)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\utils\common.py", line 33, in read_yaml
+    raise e
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\utils\common.py", line 26, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'params.yaml'
+[2024-11-11 14:25:17,444: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 14:25:17,453: ERROR: main: [Errno 2] No such file or directory: 'params.yaml']
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 10, in <module>
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_1_data_ingestion.py", line 11, in initiate_data_ingestion
+    config=ConfigurationManager()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 11, in __init__
+    self.paramss=read_yaml(params_filepath)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\utils\common.py", line 33, in read_yaml
+    raise e
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\utils\common.py", line 26, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'params.yaml'
+[2024-11-11 14:36:23,194: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 14:36:23,205: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 14:36:23,206: INFO: common: created directory at: artifacts]
+[2024-11-11 14:36:23,207: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 14:36:23,207: INFO: data_ingestion: File already exits]
+[2024-11-11 14:36:23,352: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 14:36:23,353: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 14:36:23,356: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 14:36:23,356: INFO: common: created directory at: artifacts]
+[2024-11-11 14:36:23,357: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 14:36:27,723: ERROR: main: 
+ requires the protobuf library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+]
+Traceback (most recent call last):
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1496, in extract_vocab_merges_from_model
+    from tiktoken.load import load_tiktoken_bpe
+ModuleNotFoundError: No module named 'tiktoken'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1636, in convert_slow_tokenizer
+    ).converted()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1533, in converted
+    tokenizer = self.tokenizer()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1526, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1498, in extract_vocab_merges_from_model
+    raise ValueError(
+ValueError: `tiktoken` is required to read a `tiktoken` file. Install it with `pip install tiktoken`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2447, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_fast.py", line 138, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1638, in convert_slow_tokenizer
+    raise ValueError(
+ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 21, in <module>
+    data_ingestion_pipeline.initiate_data_transformation()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation=DataTransformation(config=data_transformation_config)
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 939, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2213, in from_pretrained
+    return cls._from_pretrained(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2448, in _from_pretrained
+    except import_protobuf_decode_error():
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 87, in import_protobuf_decode_error
+    raise ImportError(PROTOBUF_IMPORT_ERROR.format(error_message))
+ImportError: 
+ requires the protobuf library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+[2024-11-11 14:38:20,102: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 14:38:20,106: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 14:38:20,107: INFO: common: created directory at: artifacts]
+[2024-11-11 14:38:20,108: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 14:38:20,108: INFO: data_ingestion: File already exits]
+[2024-11-11 14:38:20,271: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 14:38:20,271: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 14:38:20,278: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 14:38:20,279: INFO: common: created directory at: artifacts]
+[2024-11-11 14:38:20,280: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 14:38:20,697: ERROR: main: 
+ requires the protobuf library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+]
+Traceback (most recent call last):
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1636, in convert_slow_tokenizer
+    ).converted()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1533, in converted
+    tokenizer = self.tokenizer()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1526, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1502, in extract_vocab_merges_from_model
+    bpe_ranks = load_tiktoken_bpe(tiktoken_url)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 144, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 48, in read_file_cached
+    cache_key = hashlib.sha1(blobpath.encode()).hexdigest()
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2447, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_fast.py", line 138, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1638, in convert_slow_tokenizer
+    raise ValueError(
+ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 21, in <module>
+    data_ingestion_pipeline.initiate_data_transformation()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation=DataTransformation(config=data_transformation_config)
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 939, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2213, in from_pretrained
+    return cls._from_pretrained(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2448, in _from_pretrained
+    except import_protobuf_decode_error():
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 87, in import_protobuf_decode_error
+    raise ImportError(PROTOBUF_IMPORT_ERROR.format(error_message))
+ImportError: 
+ requires the protobuf library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+[2024-11-11 14:40:38,935: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 14:40:38,948: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 14:40:38,950: INFO: common: created directory at: artifacts]
+[2024-11-11 14:40:38,950: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 14:40:38,950: INFO: data_ingestion: File already exits]
+[2024-11-11 14:40:39,078: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 14:40:39,079: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 14:40:39,081: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 14:40:39,082: INFO: common: created directory at: artifacts]
+[2024-11-11 14:40:39,083: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 14:40:39,450: ERROR: main: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']]
+Traceback (most recent call last):
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1636, in convert_slow_tokenizer
+    ).converted()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1533, in converted
+    tokenizer = self.tokenizer()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1526, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1502, in extract_vocab_merges_from_model
+    bpe_ranks = load_tiktoken_bpe(tiktoken_url)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 144, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 48, in read_file_cached
+    cache_key = hashlib.sha1(blobpath.encode()).hexdigest()
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 21, in <module>
+    data_ingestion_pipeline.initiate_data_transformation()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation=DataTransformation(config=data_transformation_config)
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 939, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2213, in from_pretrained
+    return cls._from_pretrained(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2447, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_fast.py", line 138, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1638, in convert_slow_tokenizer
+    raise ValueError(
+ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+[2024-11-11 14:57:37,942: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-11 14:57:37,945: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-11 14:57:37,947: INFO: config: JAX version 0.4.35 available.]
+[2024-11-11 14:57:41,215: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 14:57:41,229: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 14:57:41,230: INFO: common: created directory at: artifacts]
+[2024-11-11 14:57:41,231: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 14:57:41,231: INFO: data_ingestion: File already exits]
+[2024-11-11 14:57:41,388: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 14:57:41,388: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 14:57:41,393: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 14:57:41,394: INFO: common: created directory at: artifacts]
+[2024-11-11 14:57:41,395: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 14:57:41,840: ERROR: main: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']]
+Traceback (most recent call last):
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1636, in convert_slow_tokenizer
+    ).converted()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1533, in converted
+    tokenizer = self.tokenizer()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1526, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1502, in extract_vocab_merges_from_model
+    bpe_ranks = load_tiktoken_bpe(tiktoken_url)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 144, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 48, in read_file_cached
+    cache_key = hashlib.sha1(blobpath.encode()).hexdigest()
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 21, in <module>
+    data_ingestion_pipeline.initiate_data_transformation()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation=DataTransformation(config=data_transformation_config)
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 939, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2213, in from_pretrained
+    return cls._from_pretrained(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2447, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_fast.py", line 138, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1638, in convert_slow_tokenizer
+    raise ValueError(
+ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+[2024-11-11 16:27:25,911: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-11 16:27:25,915: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-11 16:27:25,917: INFO: config: JAX version 0.4.35 available.]
+[2024-11-11 16:27:27,632: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 16:27:27,635: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 16:27:27,635: INFO: common: created directory at: artifacts]
+[2024-11-11 16:27:27,636: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 16:27:27,636: INFO: data_ingestion: File already exits]
+[2024-11-11 16:27:27,770: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 16:27:27,770: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 16:27:27,773: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 16:27:27,774: INFO: common: created directory at: artifacts]
+[2024-11-11 16:27:27,774: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 16:27:28,232: ERROR: main: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']]
+Traceback (most recent call last):
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1636, in convert_slow_tokenizer
+    ).converted()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1533, in converted
+    tokenizer = self.tokenizer()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1526, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1502, in extract_vocab_merges_from_model
+    bpe_ranks = load_tiktoken_bpe(tiktoken_url)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 144, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 48, in read_file_cached
+    cache_key = hashlib.sha1(blobpath.encode()).hexdigest()
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 21, in <module>
+    data_ingestion_pipeline.initiate_data_transformation()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation=DataTransformation(config=data_transformation_config)
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 939, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2213, in from_pretrained
+    return cls._from_pretrained(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2447, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_fast.py", line 138, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1638, in convert_slow_tokenizer
+    raise ValueError(
+ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+[2024-11-11 16:33:33,800: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-11 16:33:33,804: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-11 16:33:33,807: INFO: config: JAX version 0.4.35 available.]
+[2024-11-11 16:33:34,922: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 16:33:34,925: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 16:33:34,926: INFO: common: created directory at: artifacts]
+[2024-11-11 16:33:34,927: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 16:33:34,927: INFO: data_ingestion: File already exits]
+[2024-11-11 16:33:35,050: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 16:33:35,051: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 16:33:35,056: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 16:33:35,057: INFO: common: created directory at: artifacts]
+[2024-11-11 16:33:35,057: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 16:33:35,713: ERROR: main: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']]
+Traceback (most recent call last):
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1636, in convert_slow_tokenizer
+    ).converted()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1533, in converted
+    tokenizer = self.tokenizer()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1526, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1502, in extract_vocab_merges_from_model
+    bpe_ranks = load_tiktoken_bpe(tiktoken_url)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 144, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 48, in read_file_cached
+    cache_key = hashlib.sha1(blobpath.encode()).hexdigest()
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 21, in <module>
+    data_ingestion_pipeline.initiate_data_transformation()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation=DataTransformation(config=data_transformation_config)
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 939, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2213, in from_pretrained
+    return cls._from_pretrained(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2447, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_fast.py", line 138, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1638, in convert_slow_tokenizer
+    raise ValueError(
+ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+[2024-11-11 16:37:33,992: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-11 16:37:33,995: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-11 16:37:33,997: INFO: config: JAX version 0.4.35 available.]
+[2024-11-11 16:37:35,036: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 16:37:35,039: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 16:37:35,040: INFO: common: created directory at: artifacts]
+[2024-11-11 16:37:35,040: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 16:37:35,041: INFO: data_ingestion: File already exits]
+[2024-11-11 16:37:35,147: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 16:37:35,149: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 16:37:35,151: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 16:37:35,152: INFO: common: created directory at: artifacts]
+[2024-11-11 16:37:35,153: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 16:37:44,402: INFO: main: Stage Data Transformation stage Completed]
