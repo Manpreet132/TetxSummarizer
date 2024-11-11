@@ -1,0 +1,24 @@
+[2024-11-10 14:56:29,957: INFO: main: Logging is implemented.]
+[2024-11-10 22:39:19,430: INFO: main: stage Data Ingestion Name initiated]
+[2024-11-10 22:39:19,444: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-10 22:39:19,445: ERROR: main: [Errno 2] No such file or directory: 'params.yaml']
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 10, in <module>
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_1_data_ingestion.py", line 11, in initiate_data_ingestion
+    config=ConfigurationManager()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 11, in __init__
+    self.paramss=read_yaml(params_filepath)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\utils\common.py", line 33, in read_yaml
+    raise e
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\utils\common.py", line 26, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'params.yaml'
+[2024-11-10 22:41:43,573: INFO: main: stage Data Ingestion Name initiated]
+[2024-11-10 22:41:43,576: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-10 22:41:43,577: INFO: common: created directory at: artifacts]
+[2024-11-10 22:41:43,578: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-10 22:41:46,860: INFO: data_ingestion: File is downloaded]
+[2024-11-10 22:41:46,983: INFO: main: Stage Data Ingestion Name completed]
