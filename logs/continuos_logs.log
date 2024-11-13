@@ -403,3 +403,508 @@ ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is
 [2024-11-11 16:37:35,152: INFO: common: created directory at: artifacts]
 [2024-11-11 16:37:35,153: INFO: common: created directory at: artifacts/data_transformation]
 [2024-11-11 16:37:44,402: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-11 19:42:13,409: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-11 19:42:13,412: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-11 19:42:13,415: INFO: config: JAX version 0.4.35 available.]
+[2024-11-11 19:44:34,852: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-11 19:44:34,854: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-11 19:44:34,857: INFO: config: JAX version 0.4.35 available.]
+[2024-11-11 19:44:46,036: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-11 19:44:47,620: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 19:44:47,630: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 19:44:47,639: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 19:44:47,639: INFO: common: created directory at: artifacts]
+[2024-11-11 19:44:47,640: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 19:44:47,640: INFO: data_ingestion: File already exits]
+[2024-11-11 19:44:47,783: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 19:44:47,784: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 19:44:47,787: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 19:44:47,789: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 19:44:47,790: INFO: common: created directory at: artifacts]
+[2024-11-11 19:44:47,790: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 19:44:49,290: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-11 19:44:49,291: INFO: main: stage Model Trainer stage initiated]
+[2024-11-11 19:44:49,294: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 19:44:49,297: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 19:44:49,297: INFO: common: created directory at: artifacts]
+[2024-11-11 19:44:49,298: ERROR: main: 'ConfigurationManager' object has no attribute 'params']
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 44, in get_model_trainer_config
+    params=self.params.TrainingArguments
+AttributeError: 'ConfigurationManager' object has no attribute 'params'
+[2024-11-11 19:46:03,682: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-11 19:46:03,685: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-11 19:46:03,688: INFO: config: JAX version 0.4.35 available.]
+[2024-11-11 19:46:13,323: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-11 19:46:13,930: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 19:46:13,933: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 19:46:13,935: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 19:46:13,935: INFO: common: created directory at: artifacts]
+[2024-11-11 19:46:13,936: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 19:46:13,936: INFO: data_ingestion: File already exits]
+[2024-11-11 19:46:14,030: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 19:46:14,031: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 19:46:14,033: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 19:46:14,035: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 19:46:14,036: INFO: common: created directory at: artifacts]
+[2024-11-11 19:46:14,037: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 19:46:15,135: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-11 19:46:15,136: INFO: main: stage Model Trainer stage initiated]
+[2024-11-11 19:46:15,138: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 19:46:15,139: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 19:46:15,140: INFO: common: created directory at: artifacts]
+[2024-11-11 19:46:15,142: INFO: common: created directory at: artifacts/model_trainer]
+[2024-11-11 19:46:15,142: ERROR: main: ModelTrainerConfig() takes no arguments]
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 48, in get_model_trainer_config
+    model_trainer_config=ModelTrainerConfig(
+TypeError: ModelTrainerConfig() takes no arguments
+[2024-11-11 19:55:01,610: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-11 19:55:01,613: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-11 19:55:01,615: INFO: config: JAX version 0.4.35 available.]
+[2024-11-11 19:55:12,760: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-11 19:55:13,514: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 19:55:13,517: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 19:55:13,519: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 19:55:13,520: INFO: common: created directory at: artifacts]
+[2024-11-11 19:55:13,521: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 19:55:13,521: INFO: data_ingestion: File already exits]
+[2024-11-11 19:55:13,648: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 19:55:13,649: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 19:55:13,652: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 19:55:13,655: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 19:55:13,656: INFO: common: created directory at: artifacts]
+[2024-11-11 19:55:13,657: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 19:55:14,633: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-11 19:55:14,634: INFO: main: stage Model Trainer stage initiated]
+[2024-11-11 19:55:14,637: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 19:55:14,639: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 19:55:14,639: INFO: common: created directory at: artifacts]
+[2024-11-11 19:55:14,640: INFO: common: created directory at: artifacts/model_trainer]
+[2024-11-11 19:55:14,640: ERROR: main: ModelTrainerConfig() takes no arguments]
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 48, in get_model_trainer_config
+    model_trainer_config=ModelTrainerConfig(
+TypeError: ModelTrainerConfig() takes no arguments
+[2024-11-11 20:46:12,478: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-11 20:46:12,481: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-11 20:46:12,483: INFO: config: JAX version 0.4.35 available.]
+[2024-11-11 20:46:31,819: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-11 20:46:33,287: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 20:46:33,297: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 20:46:33,305: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 20:46:33,306: INFO: common: created directory at: artifacts]
+[2024-11-11 20:46:33,306: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 20:46:33,307: INFO: data_ingestion: File already exits]
+[2024-11-11 20:46:33,447: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 20:46:33,447: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 20:46:33,451: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 20:46:33,454: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 20:46:33,455: INFO: common: created directory at: artifacts]
+[2024-11-11 20:46:33,456: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 20:46:34,570: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-11 20:46:34,571: INFO: main: stage Model Trainer stage initiated]
+[2024-11-11 20:46:34,575: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 20:46:34,577: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 20:46:34,577: INFO: common: created directory at: artifacts]
+[2024-11-11 20:46:34,577: ERROR: main: 'ConfigurationManager' object has no attribute 'params']
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 44, in get_model_trainer_config
+    params=self.params.TrainingArguments
+AttributeError: 'ConfigurationManager' object has no attribute 'params'
+[2024-11-11 20:48:28,143: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-11 20:48:28,146: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-11 20:48:28,149: INFO: config: JAX version 0.4.35 available.]
+[2024-11-11 20:48:43,507: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-11 20:48:44,514: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-11 20:48:44,520: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 20:48:44,522: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 20:48:44,522: INFO: common: created directory at: artifacts]
+[2024-11-11 20:48:44,523: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-11 20:48:44,523: INFO: data_ingestion: File already exits]
+[2024-11-11 20:48:44,675: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-11 20:48:44,676: INFO: main: stage Data Transformation stage initiated]
+[2024-11-11 20:48:44,680: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 20:48:44,684: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 20:48:44,685: INFO: common: created directory at: artifacts]
+[2024-11-11 20:48:44,686: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-11 20:48:46,485: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-11 20:48:46,485: INFO: main: stage Model Trainer stage initiated]
+[2024-11-11 20:48:46,488: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-11 20:48:46,491: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-11 20:48:46,492: INFO: common: created directory at: artifacts]
+[2024-11-11 20:48:46,492: INFO: common: created directory at: artifacts/model_trainer]
+[2024-11-11 20:48:46,493: ERROR: main: ModelTrainerConfig() takes no arguments]
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 48, in get_model_trainer_config
+    model_trainer_config=ModelTrainerConfig(
+TypeError: ModelTrainerConfig() takes no arguments
+[2024-11-13 17:43:38,209: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-13 17:43:38,212: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-13 17:43:38,214: INFO: config: JAX version 0.4.35 available.]
+[2024-11-13 17:44:19,363: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-13 17:44:21,417: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-13 17:44:21,429: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:44:21,439: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:44:21,440: INFO: common: created directory at: artifacts]
+[2024-11-13 17:44:21,441: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-13 17:44:21,442: INFO: data_ingestion: File already exits]
+[2024-11-13 17:44:21,605: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-13 17:44:21,606: INFO: main: stage Data Transformation stage initiated]
+[2024-11-13 17:44:21,609: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:44:21,611: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:44:21,612: INFO: common: created directory at: artifacts]
+[2024-11-13 17:44:21,613: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-13 17:44:22,925: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-13 17:44:22,925: INFO: main: stage Model Trainer stage initiated]
+[2024-11-13 17:44:22,928: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:44:22,930: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:44:22,931: INFO: common: created directory at: artifacts]
+[2024-11-13 17:44:22,932: INFO: common: created directory at: artifacts/model_trainer]
+[2024-11-13 17:44:22,933: ERROR: main: ModelTrainerConfig() takes no arguments]
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 48, in get_model_trainer_config
+    model_trainer_config=ModelTrainerConfig(
+TypeError: ModelTrainerConfig() takes no arguments
+[2024-11-13 17:46:39,999: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-13 17:46:40,001: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-13 17:46:40,004: INFO: config: JAX version 0.4.35 available.]
+[2024-11-13 17:46:51,743: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-13 17:46:52,474: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-13 17:46:52,478: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:46:52,479: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:46:52,480: INFO: common: created directory at: artifacts]
+[2024-11-13 17:46:52,480: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-13 17:46:52,481: INFO: data_ingestion: File already exits]
+[2024-11-13 17:46:52,607: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-13 17:46:52,607: INFO: main: stage Data Transformation stage initiated]
+[2024-11-13 17:46:52,610: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:46:52,612: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:46:52,613: INFO: common: created directory at: artifacts]
+[2024-11-13 17:46:52,613: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-13 17:46:53,656: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-13 17:46:53,657: INFO: main: stage Model Trainer stage initiated]
+[2024-11-13 17:46:53,660: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:46:53,661: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:46:53,662: INFO: common: created directory at: artifacts]
+[2024-11-13 17:46:53,662: ERROR: main: 'ConfigurationManager' object has no attribute 'params']
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 44, in get_model_trainer_config
+    params=self.params.TrainingArguments
+AttributeError: 'ConfigurationManager' object has no attribute 'params'
+[2024-11-13 17:47:44,523: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-13 17:47:44,525: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-13 17:47:44,527: INFO: config: JAX version 0.4.35 available.]
+[2024-11-13 17:47:55,594: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-13 17:47:56,515: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-13 17:47:56,519: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:47:56,521: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:47:56,523: INFO: common: created directory at: artifacts]
+[2024-11-13 17:47:56,524: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-13 17:47:56,524: INFO: data_ingestion: File already exits]
+[2024-11-13 17:47:56,698: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-13 17:47:56,699: INFO: main: stage Data Transformation stage initiated]
+[2024-11-13 17:47:56,703: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:47:56,705: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:47:56,706: INFO: common: created directory at: artifacts]
+[2024-11-13 17:47:56,707: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-13 17:47:58,344: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-13 17:47:58,345: INFO: main: stage Model Trainer stage initiated]
+[2024-11-13 17:47:58,350: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:47:58,353: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:47:58,353: INFO: common: created directory at: artifacts]
+[2024-11-13 17:47:58,353: ERROR: main: 'ConfigurationManager' object has no attribute 'params']
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 44, in get_model_trainer_config
+    paramss=self.params.TrainingArguments
+AttributeError: 'ConfigurationManager' object has no attribute 'params'
+[2024-11-13 17:48:31,257: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-13 17:48:31,259: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-13 17:48:31,262: INFO: config: JAX version 0.4.35 available.]
+[2024-11-13 17:48:44,890: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-13 17:48:45,877: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-13 17:48:45,881: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:48:45,883: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:48:45,884: INFO: common: created directory at: artifacts]
+[2024-11-13 17:48:45,885: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-13 17:48:45,886: INFO: data_ingestion: File already exits]
+[2024-11-13 17:48:46,036: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-13 17:48:46,036: INFO: main: stage Data Transformation stage initiated]
+[2024-11-13 17:48:46,039: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:48:46,041: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:48:46,042: INFO: common: created directory at: artifacts]
+[2024-11-13 17:48:46,043: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-13 17:48:47,324: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-13 17:48:47,325: INFO: main: stage Model Trainer stage initiated]
+[2024-11-13 17:48:47,328: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:48:47,331: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:48:47,331: INFO: common: created directory at: artifacts]
+[2024-11-13 17:48:47,332: INFO: common: created directory at: artifacts/model_trainer]
+[2024-11-13 17:48:47,332: ERROR: main: name 'params' is not defined]
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 52, in get_model_trainer_config
+    num_train_epochs = params.num_train_epochs,
+NameError: name 'params' is not defined
+[2024-11-13 17:50:10,419: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-13 17:50:10,421: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-13 17:50:10,424: INFO: config: JAX version 0.4.35 available.]
+[2024-11-13 17:50:32,400: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-13 17:50:33,943: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-13 17:50:33,953: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:50:33,962: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:50:33,963: INFO: common: created directory at: artifacts]
+[2024-11-13 17:50:33,964: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-13 17:50:33,964: INFO: data_ingestion: File already exits]
+[2024-11-13 17:50:34,084: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-13 17:50:34,085: INFO: main: stage Data Transformation stage initiated]
+[2024-11-13 17:50:34,088: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:50:34,089: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:50:34,090: INFO: common: created directory at: artifacts]
+[2024-11-13 17:50:34,090: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-13 17:50:35,753: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-13 17:50:35,754: INFO: main: stage Model Trainer stage initiated]
+[2024-11-13 17:50:35,757: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:50:35,759: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:50:35,759: INFO: common: created directory at: artifacts]
+[2024-11-13 17:50:35,759: INFO: common: created directory at: artifacts/model_trainer]
+[2024-11-13 17:50:35,760: ERROR: main: ModelTrainerConfig() takes no arguments]
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 48, in get_model_trainer_config
+    model_trainer_config=ModelTrainerConfig(
+TypeError: ModelTrainerConfig() takes no arguments
+[2024-11-13 17:57:10,705: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-13 17:57:10,709: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-13 17:57:10,711: INFO: config: JAX version 0.4.35 available.]
+[2024-11-13 17:57:23,329: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-13 17:57:24,100: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-13 17:57:24,104: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:57:24,105: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:57:24,106: INFO: common: created directory at: artifacts]
+[2024-11-13 17:57:24,106: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-13 17:57:24,107: INFO: data_ingestion: File already exits]
+[2024-11-13 17:57:24,224: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-13 17:57:24,224: INFO: main: stage Data Transformation stage initiated]
+[2024-11-13 17:57:24,226: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:57:24,228: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:57:24,228: INFO: common: created directory at: artifacts]
+[2024-11-13 17:57:24,229: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-13 17:57:25,329: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-13 17:57:25,330: INFO: main: stage Model Trainer stage initiated]
+[2024-11-13 17:57:25,333: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 17:57:25,335: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 17:57:25,336: INFO: common: created directory at: artifacts]
+[2024-11-13 17:57:25,336: INFO: common: created directory at: artifacts/model_trainer]
+[2024-11-13 17:57:25,337: ERROR: main: ModelTrainerConfig() takes no arguments]
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\config\configuration.py", line 48, in get_model_trainer_config
+    model_trainer_config=ModelTrainerConfig(
+TypeError: ModelTrainerConfig() takes no arguments
+[2024-11-13 18:02:40,213: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-13 18:02:40,216: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-13 18:02:40,218: INFO: config: JAX version 0.4.35 available.]
+[2024-11-13 18:02:50,504: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-13 18:02:51,131: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-13 18:02:51,135: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 18:02:51,135: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 18:02:51,136: INFO: common: created directory at: artifacts]
+[2024-11-13 18:02:51,137: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-13 18:02:51,137: INFO: data_ingestion: File already exits]
+[2024-11-13 18:02:51,235: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-13 18:02:51,235: INFO: main: stage Data Transformation stage initiated]
+[2024-11-13 18:02:51,238: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 18:02:51,240: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 18:02:51,241: INFO: common: created directory at: artifacts]
+[2024-11-13 18:02:51,241: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-13 18:02:52,717: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-13 18:02:52,717: INFO: main: stage Model Trainer stage initiated]
+[2024-11-13 18:02:52,721: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 18:02:52,723: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 18:02:52,723: INFO: common: created directory at: artifacts]
+[2024-11-13 18:02:52,724: INFO: common: created directory at: artifacts/model_trainer]
+[2024-11-13 18:02:53,155: ERROR: main: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']]
+Traceback (most recent call last):
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1636, in convert_slow_tokenizer
+    ).converted()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1533, in converted
+    tokenizer = self.tokenizer()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1526, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1502, in extract_vocab_merges_from_model
+    bpe_ranks = load_tiktoken_bpe(tiktoken_url)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 144, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tiktoken\load.py", line 48, in read_file_cached
+    cache_key = hashlib.sha1(blobpath.encode()).hexdigest()
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\components\model_trainer.py", line 15, in train
+    tokenizer = AutoTokenizer.from_pretrained(self.config.model_ckpt)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 939, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2213, in from_pretrained
+    return cls._from_pretrained(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 2447, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_fast.py", line 138, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1638, in convert_slow_tokenizer
+    raise ValueError(
+ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+[2024-11-13 18:08:14,326: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-13 18:08:14,330: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-13 18:08:14,331: INFO: config: JAX version 0.4.35 available.]
+[2024-11-13 18:08:24,904: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-13 18:08:25,691: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-13 18:08:25,693: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 18:08:25,695: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 18:08:25,695: INFO: common: created directory at: artifacts]
+[2024-11-13 18:08:25,696: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-13 18:08:25,696: INFO: data_ingestion: File already exits]
+[2024-11-13 18:08:25,822: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-13 18:08:25,822: INFO: main: stage Data Transformation stage initiated]
+[2024-11-13 18:08:25,827: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 18:08:25,829: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 18:08:25,830: INFO: common: created directory at: artifacts]
+[2024-11-13 18:08:25,830: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-13 18:08:26,870: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-13 18:08:26,872: INFO: main: stage Model Trainer stage initiated]
+[2024-11-13 18:08:26,876: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 18:08:26,877: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 18:08:26,877: INFO: common: created directory at: artifacts]
+[2024-11-13 18:08:26,878: INFO: common: created directory at: artifacts/model_trainer]
+[2024-11-13 19:29:22,157: INFO: main: Stage Model Trainer stage Completed]
+[2024-11-13 19:29:22,178: INFO: main: *******************]
+[2024-11-13 19:29:22,179: INFO: main: >>>>>> stage Model Evaluation stage started <<<<<<]
+[2024-11-13 19:29:22,268: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 19:29:22,300: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 19:29:22,303: INFO: common: created directory at: artifacts]
+[2024-11-13 19:29:22,304: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-11-13 19:29:31,337: ERROR: main: To be able to use evaluate-metric/rouge, you need to install the following dependencies['nltk', 'rouge_score'] using 'pip install # Here to have a nice missing dependency error message early on rouge_score' for instance']
+Traceback (most recent call last):
+  File "C:\Users\kullarm\AIOPS\textsummarizer\main.py", line 48, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\pipeline\stage_4_model_evaluation_pipeline.py", line 13, in initiate_model_evaluation
+    model_evaluation.evaluate()
+  File "C:\Users\kullarm\AIOPS\textsummarizer\src\textSummarizer\components\model_evaluation.py", line 67, in evaluate
+    rouge_metric = evaluate.load('rouge')
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\evaluate\loading.py", line 748, in load
+    evaluation_module = evaluation_module_factory(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\evaluate\loading.py", line 680, in evaluation_module_factory
+    raise e1 from None
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\evaluate\loading.py", line 639, in evaluation_module_factory
+    ).get_module()
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\evaluate\loading.py", line 489, in get_module
+    local_imports = _download_additional_modules(
+  File "c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\evaluate\loading.py", line 265, in _download_additional_modules
+    raise ImportError(
+ImportError: To be able to use evaluate-metric/rouge, you need to install the following dependencies['nltk', 'rouge_score'] using 'pip install # Here to have a nice missing dependency error message early on rouge_score' for instance'
+[2024-11-13 19:32:10,094: INFO: config: PyTorch version 2.5.1 available.]
+[2024-11-13 19:32:10,096: INFO: config: TensorFlow version 2.18.0 available.]
+[2024-11-13 19:32:10,101: INFO: config: JAX version 0.4.35 available.]
+[2024-11-13 19:32:32,793: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-13 19:32:34,541: INFO: main: stage Data Ingestion stage initiated]
+[2024-11-13 19:32:34,544: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 19:32:34,545: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 19:32:34,546: INFO: common: created directory at: artifacts]
+[2024-11-13 19:32:34,546: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-13 19:32:34,547: INFO: data_ingestion: File already exits]
+[2024-11-13 19:32:34,679: INFO: main: Stage Data Ingestion stage completed]
+[2024-11-13 19:32:34,680: INFO: main: stage Data Transformation stage initiated]
+[2024-11-13 19:32:34,682: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 19:32:34,684: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 19:32:34,684: INFO: common: created directory at: artifacts]
+[2024-11-13 19:32:34,685: INFO: common: created directory at: artifacts/data_transformation]
+[2024-11-13 19:32:36,204: INFO: main: Stage Data Transformation stage Completed]
+[2024-11-13 19:32:36,205: INFO: main: stage Model Trainer stage initiated]
+[2024-11-13 19:32:36,208: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 19:32:36,210: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 19:32:36,213: INFO: common: created directory at: artifacts]
+[2024-11-13 19:32:36,214: INFO: common: created directory at: artifacts/model_trainer]
+[2024-11-13 20:38:30,237: INFO: main: Stage Model Trainer stage Completed]
+[2024-11-13 20:38:30,252: INFO: main: *******************]
+[2024-11-13 20:38:30,253: INFO: main: >>>>>> stage Model Evaluation stage started <<<<<<]
+[2024-11-13 20:38:30,324: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 20:38:30,349: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 20:38:30,351: INFO: common: created directory at: artifacts]
+[2024-11-13 20:38:30,352: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-11-13 20:43:08,482: INFO: rouge_scorer: Using default tokenizer.]
+[2024-11-13 20:43:08,802: INFO: main: >>>>>> stage Model Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-11-13 20:57:39,046: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 20:57:39,052: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 20:57:39,053: INFO: common: created directory at: artifacts]
+[2024-11-13 20:57:39,053: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-11-13 20:57:45,010: WARNING: module_wrapper: From c:\Users\kullarm\AIOPS\textsummarizer\venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-11-13 20:59:47,770: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-13 20:59:47,772: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-13 20:59:47,773: INFO: common: created directory at: artifacts]
+[2024-11-13 20:59:47,774: INFO: common: created directory at: artifacts/model_evaluation]
